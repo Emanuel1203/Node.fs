@@ -1,10 +1,9 @@
 const fs = require("fs");
-const { fileURLToPath } = require("url");
 
-fs.unlink("./HelloWorld.txt", (err) => {
-    if(err){
-        console.error(err);
-    } else {
-        console.log("Successfully deleted fileURLToPath.")
+let filePath = "./HelloWorld.txt";
+
+fs.writeFile(filePath, "Hello World!", (err) => {
+    if (err) {
+        console.log('Successfully crearted ${filePath}');
     }
 });
